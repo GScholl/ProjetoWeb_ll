@@ -15,5 +15,5 @@ if (isset($_GET['uri'])) {
     $router->route($uri);
 } else {
 
-    echo "Bem-vindo à página inicial";
+    require_once 'Views/home.php';
 }
