@@ -1,12 +1,12 @@
 <?php
-require_once 'Routes.php';
+require_once 'Config/Router.php';
 
-$router = new Routes();
+$router = new Router();
 
 
 // Define as rotas do  Sistema
 
-$router->addRoute('teste', 'Teste', 'index');
+$router->addRoute('teste/(:num)', 'Teste', 'index');
 
 
 if (isset($_GET['uri'])) {
