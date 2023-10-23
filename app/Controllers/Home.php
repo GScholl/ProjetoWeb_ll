@@ -6,18 +6,20 @@ namespace Controllers;
 use Controllers\BaseController;
 use Libraries\Template;
 
-class Teste extends BaseController
+class Home extends BaseController
 {
 
     public function __construct()
     {
         $this->template = new Template();
     }
-    public function index($jesus)
+    public function index()
     {
-
-        $dados = ["pinto" => "Teste"];
         echo $this->template->header();
-       
+
+        echo $this->template->navbar();
+
+        echo view("home");
+        echo $this->template->footer();
     }
 }

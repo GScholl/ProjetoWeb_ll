@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -10,8 +10,4 @@
     <?php } ?>
 </head>
 
-<body>
-    <?= base_url("/teste/2") ?>
-</body>
 
-</html>

@@ -6,7 +6,7 @@ namespace Config;
 class App
 {
 
-    public $url = "localhost/ProjetoWeb_ll/";
+    public $url = "http://localhost/ProjetoWeb_ll/";
 
    
 }

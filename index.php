@@ -7,16 +7,10 @@ $router = new Router();
 
 
 // Define as rotas do  Sistema
-
+$router->addRoute(" ", "Home", "index");
 $router->addRoute('teste/(:num)', 'Teste', 'index');
 
 
-require "vendor/autoload.php";
-if (isset($_GET['uri'])) {
-    $uri = $_GET['uri'];
+require "vendor/autoload.php";;
 
-    $router->route($uri);
-} else {
-
-    require_once 'app/Views/home.php';
-}
+$router->route((isset($_GET['uri']) ? $_GET['uri'] :" "));

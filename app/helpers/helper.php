@@ -6,8 +6,14 @@ use Config\App;
 function view($dir, $data = [])
 {
     extract($data);
+    ob_start(); 
     require "app/Views/" . $dir . ".php";
-    return;
+
+    
+    $conteudoHtml = ob_get_clean();
+
+   
+    return $conteudoHtml;
 }
 
 function base_url($url)
