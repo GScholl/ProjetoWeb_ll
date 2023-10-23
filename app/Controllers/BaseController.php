@@ -1,14 +1,13 @@
 <?php
 
 namespace Controllers;
-
-class BaseController
+use Config\App;
+class BaseController extends App
 {
-
-    public function view($dir,$data = [])
-    {
-        extract($data);
-        require $dir;
-        return;
+    public function __construct(){
+        
     }
+    
+
+    
 }

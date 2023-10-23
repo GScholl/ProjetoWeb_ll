@@ -1,5 +1,7 @@
 <?php
+require "vendor/autoload.php";
 require_once 'app/Config/Router.php';
+require_once 'app/helpers/helper.php';
 
 $router = new Router();
 

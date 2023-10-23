@@ -15,9 +15,14 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         array (
             'Libraries\\' => 10,
         ),
+        'H' => 
+        array (
+            'Helpers\\' => 8,
+        ),
         'C' => 
         array (
             'Controllers\\' => 12,
+            'Config\\' => 7,
         ),
     );
 
@@ -30,9 +35,17 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         array (
             0 => __DIR__ . '/../..' . '/app/Libraries',
         ),
+        'Helpers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/helpers',
+        ),
         'Controllers\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/Controllers',
+        ),
+        'Config\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Config',
         ),
     );
 

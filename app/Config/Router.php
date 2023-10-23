@@ -33,7 +33,7 @@ class Router
             $route = $this->routes[$uri];
             $controllerName = $route['controller'];
             $methodName = $route['method'];
-            require "vendor/autoload.php";
+            
            // require_once 'app/Controllers/'.$controllerName . '.php';
             $controller = new $controllerName();
             call_user_func_array(array($controller, $methodName), $parameters);

@@ -2,16 +2,22 @@
 
 
 namespace Controllers;
+
 use Controllers\BaseController;
 use Libraries\Template;
 
 class Teste extends BaseController
 {
 
-
+    public function __construct()
+    {
+        $this->template = new Template();
+    }
     public function index($jesus)
     {
-        $template = new Template();
-        echo "Funcionou o roteamento amigavel $jesus";
+
+        $dados = ["pinto" => "Teste"];
+        echo $this->template->header();
+       
     }
 }

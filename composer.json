@@ -3,7 +3,9 @@
         "psr-4": {
             "ProjetoWeb\\": "app/",
             "Libraries\\": "app/Libraries/",
-            "Controllers\\": "app/Controllers/"
+            "Controllers\\": "app/Controllers/",
+            "Config\\": "app/Config/",
+            "Helpers\\": "app/helpers/"
         }
     } 
 }
