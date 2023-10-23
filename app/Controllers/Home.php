@@ -15,10 +15,9 @@ class Home extends BaseController
     }
     public function index()
     {
-        echo $this->template->navbar().view("home").$this->template->footer();
-
-     
-
-       
+       // echo htmlentities($this->template->header());
+        echo $this->template->navbar();
+        echo view("home");
+        echo $this->template->footer();
     }
 }

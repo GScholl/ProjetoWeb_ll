@@ -9,27 +9,28 @@ class Template extends BaseController
 
 
 
-    public function header($ExtrasCSS = [])
+    // public function header()
+    // {
+       
+    //     return view("templates/header", $dados);
+    // }
+    public function navbar($ExtrasCSS = [])
     {
         $ImportsCss = [
-            "public/bootstrap/css/bootstrap.min.css"
+            "/public/bootstrap/css/bootstrap.min.css"
 
         ];
-        array_push($ImportsCss, $ExtrasCSS);
+        array_merge($ImportsCss, $ExtrasCSS);
         $dados['css_files'] = $ImportsCss;
-        return view("templates/header", $dados);
-    }
-    public function navbar()
-    {
 
-        return view("templates/navbar");
+        return view("templates/navbar",$dados);
     }
 
 
     public function footer($ExtrasJS = [])
     {
         $ImportsJs = [
-            "public/bootstrap/css/bootstrap.min.js"
+            "/public/bootstrap/css/bootstrap.min.js"
 
         ];
         array_push($ImportsJs, $ExtrasJS);
