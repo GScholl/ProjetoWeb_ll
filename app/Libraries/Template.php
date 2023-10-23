@@ -1,9 +1,9 @@
 <?php 
 
-
 namespace Libraries;
+use Controllers\BaseController;
 
-class Template {
+class Template extends BaseController{
 
 
 

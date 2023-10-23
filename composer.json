@@ -1,0 +1,9 @@
+{
+    "autoload": {
+        "psr-4": {
+            "ProjetoWeb\\": "app/",
+            "Libraries\\": "app/Libraries/",
+            "Controllers\\": "app/Controllers/"
+        }
+    } 
+}

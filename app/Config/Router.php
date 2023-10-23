@@ -1,4 +1,5 @@
 <?php
+
 class Router
 {
     private $routes = [];
@@ -6,7 +7,7 @@ class Router
     public function addRoute($route, $controller, $method)
     {
         $this->routes[$route] = [
-            'controller' => $controller,
+            'controller' => 'Controllers\\'.$controller,
             'method' => $method
         ];
     }
@@ -32,13 +33,13 @@ class Router
             $route = $this->routes[$uri];
             $controllerName = $route['controller'];
             $methodName = $route['method'];
-
-            require_once 'Controllers/'.$controllerName . '.php';
+            require "vendor/autoload.php";
+           // require_once 'app/Controllers/'.$controllerName . '.php';
             $controller = new $controllerName();
             call_user_func_array(array($controller, $methodName), $parameters);
         } else {
 
-            require_once "Views/errors/error404.php";
+            require_once "app/Views/errors/error404.php";
         }
     }
 }
