@@ -14,6 +14,6 @@ $router->addRoute(" ", "Home", "index");
 $router->addRoute('teste/(:num)', 'Teste', 'index');
 
 
-require "vendor/autoload.php";;
 
-$router->route((isset($_GET['uri']) ? $_GET['uri'] :" "));
+
+$router->route((isset($_GET['uri']) ? $_GET['uri'] : " "));
