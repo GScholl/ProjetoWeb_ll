@@ -3,6 +3,7 @@
 
 namespace Controllers;
 
+use Models\BaseModel; 
 use Controllers\BaseController;
 use Libraries\Template;
 
@@ -15,7 +16,8 @@ class Home extends BaseController
     }
     public function index()
     {
-       // echo htmlentities($this->template->header());
+       
+        // echo htmlentities($this->template->header());
         echo $this->template->navbar();
         echo view("home");
         echo $this->template->footer();

@@ -5,7 +5,8 @@
             "Libraries\\": "app/Libraries/",
             "Controllers\\": "app/Controllers/",
             "Config\\": "app/Config/",
-            "Helpers\\": "app/helpers/"
+            "Helpers\\": "app/helpers/",
+            "Models\\": "app/Models/"
         }
     } 
 }

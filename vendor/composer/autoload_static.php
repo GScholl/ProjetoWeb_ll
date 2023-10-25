@@ -11,6 +11,10 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         array (
             'ProjetoWeb\\' => 11,
         ),
+        'M' => 
+        array (
+            'Models\\' => 7,
+        ),
         'L' => 
         array (
             'Libraries\\' => 10,
@@ -30,6 +34,10 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         'ProjetoWeb\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+        'Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Models',
         ),
         'Libraries\\' => 
         array (
