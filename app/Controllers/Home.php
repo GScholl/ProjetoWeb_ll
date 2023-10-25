@@ -16,7 +16,9 @@ class Home extends BaseController
     }
     public function index()
     {
-       
+        $db = new BaseModel();
+
+        print_r($db->getFirst("SELECT * FROM produto"));
         // echo htmlentities($this->template->header());
         echo $this->template->navbar();
         echo view("home");
