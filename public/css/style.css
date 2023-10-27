@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: caviardreams;
+  src: url(../../theme/dist/fonts/Poppins-Regular.ttf);
+}
+body {
+  font-family: "caviardreams", sans-serif;
+}
+
+.navbar-plataforma {
+  align-content: end;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+nav {
+  background-color: #fff306;
+}
+#pesquisa_curso {
+  border-radius: 20px;
+  background-color: #fffa71;
+  border: none;
+  color: white;
+}
+#pesquisa_curso::placeholder {
+  color: white;
+}
+#pesquisa_curso:focus {
+  box-shadow: 0 0 0 0.25rem rgba(234, 185, 52, 0.25);
+}
+.form-pesquisa {
+  flex-grow: 4;
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#btn-pesquisa {
+  border-radius: 20px;
+}
+@media screen and (max-width: 992px) {
+  .form-pesquisa {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

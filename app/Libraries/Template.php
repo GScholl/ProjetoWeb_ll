@@ -17,7 +17,11 @@ class Template extends BaseController
     public function navbar($ExtrasCSS = [])
     {
         $ImportsCss = [
-            "/public/bootstrap/css/bootstrap.min.css"
+            "/public/bootstrap/css/bootstrap.min.css",
+            "/public/css/style.css",
+           "public/fontawesome/css/fontawesome.css",
+           "public/fontawesome/css/brands.css",
+           "public/fontawesome/css/solid.css"
 
         ];
         array_merge($ImportsCss, $ExtrasCSS);
