@@ -34,7 +34,7 @@ class Template extends BaseController
     public function footer($ExtrasJS = [])
     {
         $ImportsJs = [
-            "/public/bootstrap/css/bootstrap.min.js"
+            "/public/bootstrap/js/bootstrap.bundle.min.js"
 
         ];
         array_push($ImportsJs, $ExtrasJS);
