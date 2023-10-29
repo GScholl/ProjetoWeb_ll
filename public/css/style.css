@@ -7,8 +7,6 @@
   --purple-lighter: rgb(200, 19, 197);
 }
 
-
-
 .navbar-plataforma {
   align-content: end;
   flex-direction: column;
@@ -24,7 +22,6 @@ body {
 nav {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   background-color: var(--dark);
-
 }
 .navbar-toggler,
 .navbar-toggler:active,
@@ -97,6 +94,25 @@ nav {
 }
 #btn-pesquisa {
   border-radius: 20px;
+}
+.card-produto {
+  min-height: 40vh;
+  background-color: var(--purple-light);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+.div-img-produto {
+  height: 25vh;
+  text-align: center;
+}
+.img-produto {
+  height: 100%;
+  margin: 0 auto;
+}
+.title-produto {
+  min-height: 15vh;
+  background-color: var(--light-dark);
+  border-radius: 15px;
 }
 @media screen and (max-width: 992px) {
   .form-pesquisa {

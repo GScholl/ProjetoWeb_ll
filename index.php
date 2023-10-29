@@ -11,6 +11,8 @@ $router = new Router();
 
 // Define as rotas do  Sistema
 $router->addRoute(" ", "Home", "index");
+$router->addRoute("login", "Cliente", "login");
+$router->addRoute("registrar-se", "Cliente", "registro");
 $router->addRoute('teste/(:num)', 'Teste', 'index');
 
 

@@ -21,8 +21,17 @@ CREATE TABLE fotos_produto(
     id INT NOT NULL AUTO_INCREMENT,
     url TEXT NOT NULL,
     alt VARCHAR(64),
+    foto_capa BOOLEAN,
     id_produto INT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (id_produto) REFERENCES produto(id)
 );
 
+CREATE TABLE clientes(
+    id INT NOT NULL,
+    nome VARCHAR(64) NOT NULL,
+    sobrenome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    senha VARCHAR(512) NOT NULL
+    PRIMARY KEY(id)
+);
