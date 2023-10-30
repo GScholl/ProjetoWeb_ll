@@ -108,6 +108,7 @@ nav {
 .img-produto {
   height: 100%;
   margin: 0 auto;
+  object-fit: cover;
 }
 .title-produto {
   min-height: 15vh;
