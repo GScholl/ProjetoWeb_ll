@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -54,6 +55,21 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Produtos
+                        </a>
+                        <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item" href="<?= base_url('plataforma/meus-cursos') ?>"><i class="fa fa-book"></i> item 1</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('plataforma/historico') ?>"><i class="fa fa-store"></i> item 2</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+
+                        </ul>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <?= !usuarioLogado() ? "Fazer Login <img class='img-perfil' src='".base_url("public/img/perfil.png")."'>" :"teste". usuarioLogado().$session->get('nome_cliente') ?> 
                         </a>
                         <ul class="dropdown-menu ">
                             <li><a class="dropdown-item" href="<?= base_url('plataforma/meus-cursos') ?>"><i class="fa fa-book"></i> item 1</a></li>

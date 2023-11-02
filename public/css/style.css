@@ -95,8 +95,21 @@ nav {
 #btn-pesquisa {
   border-radius: 20px;
 }
+.img-perfil{
+
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border:  2px solid var(--purple);
+  border-radius: 50%;
+  background-color: var(--light-dark);
+}
+
 .card-produto {
-  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 45vh;
   background-color: var(--purple-light);
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
@@ -110,10 +123,21 @@ nav {
   margin: 0 auto;
   object-fit: cover;
 }
+#btn-comprar{
+
+  display: none;
+}
 .title-produto {
   min-height: 15vh;
   background-color: var(--light-dark);
   border-radius: 15px;
+  transition: all 1s;
+}
+.title-produto:hover{
+  min-height: 20vh;
+  #btn-comprar{
+    display: initial;
+  }
 }
 @media screen and (max-width: 992px) {
   .form-pesquisa {

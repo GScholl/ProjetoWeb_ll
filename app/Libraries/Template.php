@@ -3,17 +3,13 @@
 namespace Libraries;
 
 use Controllers\BaseController;
+use Libraries\Session;
 
 class Template extends BaseController
 {
 
 
 
-    // public function header()
-    // {
-       
-    //     return view("templates/header", $dados);
-    // }
     public function navbar($ExtrasCSS = [])
     {
         $ImportsCss = [
@@ -25,6 +21,7 @@ class Template extends BaseController
 
         ];
         array_merge($ImportsCss, $ExtrasCSS);
+        $dados['session'] = new Session();
         $dados['css_files'] = $ImportsCss;
 
         return view("templates/navbar",$dados);
@@ -34,7 +31,9 @@ class Template extends BaseController
     public function footer($ExtrasJS = [])
     {
         $ImportsJs = [
-            "/public/bootstrap/js/bootstrap.bundle.min.js"
+            "/public/bootstrap/js/bootstrap.bundle.min.js",
+            "/public/js/jquery/jquery.min.js",
+            "/public/js/script.js"
 
         ];
         array_push($ImportsJs, $ExtrasJS);

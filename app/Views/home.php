@@ -20,6 +20,8 @@
                                 <div class="title-produto d-flex flex-wrap p-2 justify-content-center">
                                     <h5 class="text-white align-self-end"><?= $produto->titulo ?></h5>
                                     <a href="<?= base_url("produto/$produto->id") ?>" class="btn fs-6 w-100  align-self-end btn-purple text-white" role="button"><i class="fa fa-plus"> </i> Carrinho</a>
+                                    <a href="<?= base_url("produto/$produto->id") ?>" class="btn fs-6 w-100  align-self-end btn-success text-white" id="btn-comprar" role="button"><i class="fa fa-cart-shopping"> </i> Comprar</a>
+
                                 </div>
                             </div>
                         </div>

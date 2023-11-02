@@ -11,19 +11,19 @@
 </head>
 
 <body>
-    <form class="form text-center">
+    <form class="form text-center" action="<?= base_url('autenticar') ?>" method="post">
         
         <p class="title"><img src="<?= base_url('public/img/logo.png') ?>" class="w-50 " alt=""> </p>
         <p class="message">Faça Login para finalizar sua compra </p>
         
 
         <label>
-            <input class="input" type="email" placeholder="" required="">
+            <input class="input" type="email" name="email" placeholder="" required="">
             <span>E-mail</span>
         </label>
 
         <label>
-            <input class="input" type="password" placeholder="" required="">
+            <input class="input" type="password" name="senha" placeholder="" required="">
             <span>Senha</span>
         </label>
       
