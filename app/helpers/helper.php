@@ -10,6 +10,31 @@ function usuarioLogado()
     $usuario = $session->get("id_cliente");
     return isset($usuario) && !empty($usuario);
 }
+
+function getResponse()
+{
+    $session = getSession();
+    $erro = $session->get('error');
+    if ($erro != false && !empty($erro)) { ?>
+        <div class="bg-danger p-2 rounded text-white">
+            <?= $erro ?>
+        </div>
+    <?php
+        $session->delete('error');
+    }
+    $sucesso = $session->get('sucesso');
+    if ($sucesso != false && !empty($sucesso)) { ?>
+        <div class="bg-success p-2 rounded text-white">
+            <?= $sucesso ?>
+        </div>
+<?php
+        $session->delete('sucesso');
+    }
+}
+function getSession()
+{
+    return  new Session();
+}
 function base_url($url)
 {
     $app = new App();

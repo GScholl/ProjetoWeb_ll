@@ -12,6 +12,7 @@ use Models\ProdutoModel;
 class Home extends BaseController
 {
 
+    public $template, $produtoModel, $categoriaModel;
     public function __construct()
     {
         $this->template = new Template();
@@ -20,11 +21,18 @@ class Home extends BaseController
     }
     public function index()
     {
+        if (isset($_GET["pesquisa"])) {
 
-        $dados['categorias'] = $this->categoriaModel->getCategorias();
-        $dados['produtos'] = $this->produtoModel->getProdutos();
+            $dados['categorias'] = $this->categoriaModel->getCategorias();
+            $dados['produtos'] = $this->produtoModel->getProdutos($_GET["pesquisa"]);
+        } else {
+
+            $dados['categorias'] = $this->categoriaModel->getCategorias();
+            $dados['produtos'] = $this->produtoModel->getProdutos();
+        }
+
         echo $this->template->navbar();
-        echo view("home",$dados);
+        echo view("home", $dados);
         echo $this->template->footer();
     }
 }

@@ -14,10 +14,9 @@ class Router
 
     public function route($uri)
     {
-
         $uris =  explode('/', $uri);
         $parameters = [];
-        foreach ($uris as  $index => $url) {
+        foreach ($uris as  $index => $url) { 
 
 
             if (is_numeric($url)) {

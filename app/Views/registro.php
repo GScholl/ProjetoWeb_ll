@@ -11,32 +11,37 @@
 </head>
 
 <body>
-    <form class="form">
-        <p class="title"><img src="<?= base_url('public/img/logo.png')?>"  class="w-50"alt=""> </p>
+    <form class="form" action="<?= base_url("registrar") ?>" method="post">
+        <p class="title"><img src="<?= base_url('public/img/logo.png') ?>" class="w-50" alt=""> </p>
         <p class="message">Faça o registro para finalizar sua Compra </p>
+        <div class="row">
+            <div class="col-12">
+                <?= getResponse() ?>
+            </div>
+        </div>
         <div class="flex">
             <label>
-                <input class="input" type="text" placeholder="" required="">
+                <input class="input" type="text" name="nome" placeholder="" minlength="3" required >
                 <span>Nome</span>
             </label>
 
             <label>
-                <input class="input" type="text"  name="sobrenome"placeholder="" required="">
+                <input class="input" type="text" name="sobrenome" minlength="3"  placeholder="" required>
                 <span>Sobrenome</span>
             </label>
         </div>
 
         <label>
-            <input class="input" type="email"  name="email"placeholder="" required="">
+            <input class="input" type="email" name="email" placeholder="" minlength="6"  required>
             <span>E-mail</span>
         </label>
 
         <label>
-            <input class="input" type="password" name="senha" placeholder="" required="">
+            <input class="input" type="password" name="senha" placeholder="" minlength="8" required>
             <span>Senha</span>
         </label>
         <label>
-            <input class="input" type="password" name="confirma-senha" placeholder="" required="">
+            <input class="input" type="password" name="confirma_senha" placeholder="" minlength="8" required>
             <span>Confirme a senha</span>
         </label>
         <button class="submit">Registre-se</button>

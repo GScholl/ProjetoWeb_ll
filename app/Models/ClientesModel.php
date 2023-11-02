@@ -19,4 +19,25 @@ class ClientesModel extends BaseModel
             return false;
         }
     }
+    public function registraCliente($cliente)
+    {
+        extract($cliente);
+        $query = "INSERT 
+                        INTO 
+                            clientes 
+                            (
+                                nome, 
+                                sobrenome, 
+                                email,
+                                senha
+                                ) 
+                        VALUES
+                            (
+                                '$nome',
+                                '$sobrenome',
+                                '$email',
+                                '$senha'
+                            )";
+        return $this->query($query);
+    }
 }

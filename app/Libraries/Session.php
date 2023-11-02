@@ -22,6 +22,9 @@ class Session extends BaseController
             return $_SESSION[$key];
         }
 
-        return null;
+        return false;
+    }
+    public function delete(string $key){
+        unset($_SESSION[$key]);
     }
 }

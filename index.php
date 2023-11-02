@@ -14,9 +14,12 @@ $router = new Router();
 // Define as rotas do  Sistema
 $router->addRoute(" ", "Home", "index");
 $router->addRoute("login", "Cliente", "login");
+$router->addRoute("logout", "Cliente", "logout");
 $router->addRoute("autenticar", "Cliente", "autenticar");
 $router->addRoute("registrar-se", "Cliente", "registro");
-$router->addRoute('teste/(:num)', 'Teste', 'index');
+$router->addRoute("registrar", "Cliente", "cadastrarCliente");
+$router->addRoute('adicionar-produto/(:num)', 'Carrinho', 'adicionaProduto');
+$router->addRoute('remover-produto/(:num)', 'Carrinho', 'removeProduto');
 
 
 
