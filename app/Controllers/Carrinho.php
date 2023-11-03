@@ -52,7 +52,7 @@ class Carrinho extends BaseController
         }
         $this->session->set("carrinho", $carrinho);
       
-        return json_encode($carrinho);
+        echo json_encode($carrinho);
     }
 
     public function removeProduto($id_produto)
@@ -85,6 +85,6 @@ class Carrinho extends BaseController
         $carrinho['subtotal'] = $carrinho['subtotal'] < 0 ? 0: $carrinho['subtotal'];
         $this->session->set("carrinho", $carrinho);
        
-        return json_encode($carrinho);
+        echo json_encode($carrinho);
     }
 }

@@ -48,7 +48,36 @@ nav {
 }
 
 .menu-carrinho {
-  min-width: 20rem !important;
+  min-width: 20.5rem !important;
+  max-height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 37px 34px -36px rgba(97, 12, 159, 0.75);
+  -webkit-box-shadow: 0px 37px 34px -36px rgba(97, 12, 159, 0.75);
+  -moz-box-shadow: 0px 37px 34px -36px rgba(97, 12, 159, 0.75);
+
+}
+
+.menu-carrinho::-webkit-scrollbar {
+  width: 12px;
+
+  /* width of the entire scrollbar */
+}
+
+.menu-carrinho::-webkit-scrollbar-track {
+  background: var(--dark);
+  border-radius: 10px;
+  /* color of the tracking area */
+}
+
+.menu-carrinho::-webkit-scrollbar-thumb {
+  background-color: var(--purple);
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 3px solid var(--dark);
+  /* creates padding around scroll thumb */
 }
 
 .nav-link {
@@ -151,7 +180,7 @@ nav {
 #btn-comprar {
 
   display: none;
- 
+
 }
 
 .title-produto {
@@ -159,6 +188,14 @@ nav {
   background-color: var(--light-dark);
   border-radius: 15px;
 
+}
+
+.img-produto-nav {
+
+  height: 4vh;
+  width: 4vh;
+  border-radius: 50%;
+  background-color: var(--purple);
 }
 
 .title-produto:hover {

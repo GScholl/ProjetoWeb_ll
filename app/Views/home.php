@@ -13,12 +13,15 @@
                         </div>
                     <?php } ?>
                     <?php foreach ($produtos as $produto) {
-                        if ($produto->id_categoria == $categoria->id) {  ?>
+                        if ($produto->id_categoria == $categoria->id) { 
+                            $tipo = strpos($produto->foto_produto, "http") == false ? 1 : 0;
+                            
+                            ?>
 
                             <div class=" col-xl-2 col-lg-3 col-md-6 col-sm-12 p-1">
                                 <div class="card-produto">
                                     <div class="div-img-produto">
-                                        <img src="https://microimport.com.br/storage/placa-mae-original-apple-watch-series-7-gps-alum-45mm.png" class="img-produto" alt="">
+                                    <img src="<?= $tipo == 0 ? base_url("public/img/produtos/".$produto->foto_produto) : $produto->foto_produto ?>" class="img-produto" alt="">
                                     </div>
                                     <div class="title-produto d-flex flex-wrap p-2 justify-content-center">
                                         <h5 class="text-white align-self-end ps-1 pe-1"><?= $produto->titulo ?></h5>
