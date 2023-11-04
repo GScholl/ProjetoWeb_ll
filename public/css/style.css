@@ -5,6 +5,7 @@
   --purple-darkness: rgb(85, 9, 139);
   --purple-light: rgb(121, 14, 197);
   --purple-lighter: rgb(200, 19, 197);
+  --bg-whiteless: #fcf5ed;
 }
 
 .navbar-plataforma {
@@ -19,7 +20,7 @@
 }
 
 body {
-  background-color: #fcf5ed;
+  background-color: var(--bg-whiteless);
 }
 
 nav {
@@ -100,7 +101,36 @@ nav {
   color: white;
 }
 
-.btn-purple {
+.item-carrinho {
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.div-carrinho {
+
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+}
+
+#liveToast {
+  background-color: var(--dark) !important;
+  color: white;
+  box-shadow: 1px 1px 4px 3px rgba(97, 12, 159, 0.54);
+  -webkit-box-shadow: 1px 1px 4px 3px rgba(97, 12, 159, 0.54);
+  -moz-box-shadow: 1px 1px 4px 3px rgba(97, 12, 159, 0.54);
+}
+.toast-header{
+  background-color: var(--dark) !important;
+  color: white;
+}
+.title-carrinho {
+
+  border-bottom: 1px solid var(--bg-whiteless);
+}
+
+.btn-purple,
+.bg-purple {
   background-color: var(--purple);
 }
 

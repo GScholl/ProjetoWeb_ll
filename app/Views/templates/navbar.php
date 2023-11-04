@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="<?= base_url('plataforma/home') ?>">
+            <a class="navbar-brand" href="<?= base_url(' ') ?>">
                 <img class="ml-0 mr-2 ml-2" height="55px" src="<?= base_url('public/img/logo.png') ?>" alt="Logo ">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -104,8 +104,8 @@
                             <?= !usuarioLogado() ? "Login <i class='fa fa-lock'></i>" : $session->get('nome_cliente') . " <img class='img-perfil' src='" . base_url("public/img/perfil.png") . "'>" ?>
                         </a>
                         <ul class="dropdown-menu ">
-                            <li><a class="dropdown-item" href="<?= base_url('plataforma/meus-cursos') ?>"><i class="fa fa-cart-shopping"></i> Meu Carrinho</a></li>
-                            <li><a class="dropdown-item" href="<?= base_url('plataforma/historico') ?>"><i class="fa fa-store"></i> item 2</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('meu-carrinho') ?>"><i class="fa fa-cart-shopping"></i> Meu Carrinho</a></li>
+
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -130,3 +130,31 @@
             </div>
         </div>
     </nav>
+    
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast " role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fa fa-check text-purple"></i>
+                <strong class="me-auto">&nbsp; Produto Adicionado</strong>
+                <small>agora</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Seu Produto foi adicionado no carrinho
+            </div>
+        </div>
+    </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast2" class="toast " role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fa fa-circle-xmark text-purple"></i>
+                <strong class="me-auto">&nbsp; Produto Adicionado</strong>
+                <small>agora</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                1 unidade do seu Produto foi removido do carrinho
+            </div>
+        </div>
+    </div>
