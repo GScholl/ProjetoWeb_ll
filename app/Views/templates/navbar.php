@@ -47,11 +47,11 @@
                                         $tipo = strpos($produto['foto_produto'], "http") == false ? 1 : 0;
 
                                 ?>
-                                        <li class="m-1">
-                                            <div class="row text-white">
+                                        <li class="m-1 mt-2 mb-2">
+                                            <div class="row  text-white">
                                                 <div class="col-2 text-center"><img src="<?= $tipo == 0 ? base_url("public/img/produtos/" . $produto['foto_produto']) : $produto['foto_produto'] ?>" class="img-produto-nav" alt=""></div>
-                                                <div class="col-6 text-center"><?= $produto['quantidade'] . "x " . $produto['titulo'] ?></div>
-                                                <div class="col-4 text-center">R$ <?= number_format($produto['valor'], 2, ',', '.') ?></div>
+                                                <div class="col-8 text-limit text-center"><?= $produto['quantidade'] . "x " . $produto['titulo'] ?></div>
+                                                <div class="col-2 text-center remover-carrinho" onclick="removeProduto(<?= $produto['id'] ?>)"><i class="fa fa-circle-xmark"></i></div>
                                             </div>
                                         </li>
                                         <?php if (count($carrinho['produtos']) - 1 < $indice) { ?>
@@ -149,12 +149,12 @@
         <div id="liveToast2" class="toast " role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <i class="fa fa-circle-xmark text-purple"></i>
-                <strong class="me-auto">&nbsp; Produto Adicionado</strong>
+                <strong class="me-auto">&nbsp; Produto removido</strong>
                 <small>agora</small>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
-                1 unidade do seu Produto foi removido do carrinho
+                Seu Produto foi removido do carrinho
             </div>
         </div>
     </div>

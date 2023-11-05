@@ -21,8 +21,8 @@ class Carrinho extends BaseController
 
     public function carrinho()
     {
-        if (usuarioLogado()) {
-            
+        if (!usuarioLogado()) {
+
             $this->session->set('error', "Antes de Finalizar a compra, faça login ou cadastre-se");
             redirect("login");
         }
@@ -30,16 +30,16 @@ class Carrinho extends BaseController
         echo view("meuCarrinho");
         echo $this->template->footer();
     }
-    public function finalizarCompra(){
-        if (usuarioLogado()) {
-            
+    public function finalizarCompra()
+    {
+        if (!usuarioLogado()) {
+
             $this->session->set('error', "Antes de Finalizar a compra, faça login ou cadastre-se");
             redirect("login");
         }
         echo $this->template->navbar();
         echo view("finalizarCompra");
         echo $this->template->footer();
-
     }
     public function criarCarrinho()
     {
@@ -89,21 +89,16 @@ class Carrinho extends BaseController
         foreach ($carrinho['produtos'] as $chave => $produtoCarrinho) {
 
             if ($id_produto == $produtoCarrinho['id']) {
-                $carrinho['subtotal'] -= $produtoCarrinho['valor'];
-                if ($produtoCarrinho['valor'] < $produtoCarrinho['valor_total'] && $produtoCarrinho['quantidade'] > 1) {
+                $carrinho['subtotal'] -= $produtoCarrinho['valor_total'] > 0 ? $produtoCarrinho['valor_total'] : $produtoCarrinho['valor'];
 
-                    $carrinho['produtos'][$chave]['valor_total'] -= $produtoCarrinho["valor"];
-                    $carrinho['produtos'][$chave]["quantidade"]--;
-                } else {
 
-                    unset($carrinho["produtos"][$chave]);
-                }
+                unset($carrinho["produtos"][$chave]);
 
 
                 break;
             }
         }
-        $carrinho['subtotal'] = $carrinho['subtotal'] < 0 ? 0 : $carrinho['subtotal'];
+        $carrinho['subtotal'] = $carrinho['subtotal'] < 0 || count($carrinho['produtos']) == 0 ? 0 : $carrinho['subtotal'];
         $this->session->set("carrinho", $carrinho);
 
         echo json_encode($carrinho);

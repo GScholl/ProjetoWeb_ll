@@ -4,10 +4,12 @@ const adicionaProduto = (id_produto) => {
     url: `${base_url}adicionar-produto/${id_produto}`,
     method: "GET",
     success: function (carrinho) {
+     
       carrinho = JSON.parse(carrinho);
       console.log(carrinho);
       $("#carrinho-navbar").empty();
-      if (carrinho.produtos.length > 0) {
+      console.log(carrinho.produtos);
+      if (carrinho.produtos.length > 0 || Object.keys(carrinho.produtos).length > 0 ) {
         $.each(carrinho.produtos, function (key, value) {
           let valor = value.valor.toLocaleString("pt-BR", {
             style: "currency",
@@ -22,10 +24,10 @@ const adicionaProduto = (id_produto) => {
                                       value.foto_produto
                                     : value.foto_produto
                                 }" class="img-produto-nav" alt=""></div>
-                                <div class="col-6 text-center">${
+                                <div class="col-8 text-limit text-center">${
                                   value.quantidade
                                 }x   ${value.titulo} </div>
-                                <div class="col-4 text-center">${valor}</div>
+                                <div class="col-2 text-center remover-carrinho" onclick="removeProduto(${value.id})"><i class="fa fa-circle-xmark"></i></div>
                             </div>
                          </li>`;
           $("#carrinho-navbar").append(linha);
@@ -82,7 +84,7 @@ const removeProduto = (id_produto) => {
       carrinho = JSON.parse(carrinho);
       console.log(carrinho);
       $("#carrinho-navbar").empty();
-      if (carrinho.produtos.length > 0) {
+      if (carrinho.produtos.length > 0 || Object.keys(carrinho.produtos).length > 0) {
         $.each(carrinho.produtos, function (key, value) {
           let valor = value.valor.toLocaleString("pt-BR", {
             style: "currency",
@@ -97,10 +99,10 @@ const removeProduto = (id_produto) => {
                                       value.foto_produto
                                     : value.foto_produto
                                 }" class="img-produto-nav" alt=""></div>
-                                <div class="col-6 text-center">${
+                                <div class="col-8 text-limit text-center">${
                                   value.quantidade
                                 }x   ${value.titulo} </div>
-                                <div class="col-4 text-center">${valor}</div>
+                                <div class="col-2 text-center remover-carrinho" onclick="removeProduto(${value.id})"><i class="fa fa-circle-xmark"></i></div>
                             </div>
                          </li>`;
           $("#carrinho-navbar").append(linha);

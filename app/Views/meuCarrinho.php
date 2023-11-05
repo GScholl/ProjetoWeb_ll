@@ -11,7 +11,7 @@
                     foreach ($carrinho['produtos'] as  $indice => $produto) {
                         $tipo = strpos($produto['foto_produto'], "http") == false ? 1 : 0;
                 ?>
-                        <div class="item-carrinho bg-white p-2">
+                        <div class="item-carrinho mt-2 mb-2 bg-white p-2">
                             <div class="row">
                                 <div class="col-2">
 

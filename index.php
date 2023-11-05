@@ -23,6 +23,8 @@ $router->addRoute('adicionar-produto/(:num)', 'Carrinho', 'adicionaProduto');
 $router->addRoute('remover-produto/(:num)', 'Carrinho', 'removeProduto');
 $router->addRoute('meu-carrinho', 'Carrinho', 'carrinho');
 $router->addRoute('finalizar-compra', 'Carrinho', 'finalizarCompra');
+$router->addRoute("produto/(:num)", "Produto", "produto");
+$router->addRoute("produtos/(:num)", "Produto", "produtosByCategoria");
 
 
 
