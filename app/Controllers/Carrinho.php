@@ -23,7 +23,7 @@ class Carrinho extends BaseController
     {
         if (!usuarioLogado()) {
 
-            $this->session->set('error', "Antes de Finalizar a compra, faça login ou cadastre-se");
+            $this->session->set('error', "Antes de ir para o carrinho, faça login ou cadastre-se");
             redirect("login");
         }
         echo $this->template->navbar();
