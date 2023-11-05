@@ -104,6 +104,11 @@ nav {
 .item-carrinho {
 
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}.img-sucesso{
+
+  width: 100%;
+  height: 40vh;
+  object-fit: contain;
 }
 
 .div-carrinho {

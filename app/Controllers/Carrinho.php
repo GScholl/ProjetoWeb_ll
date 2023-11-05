@@ -37,6 +37,7 @@ class Carrinho extends BaseController
             $this->session->set('error', "Antes de Finalizar a compra, faça login ou cadastre-se");
             redirect("login");
         }
+        $this->session->delete('carrinho');
         echo $this->template->navbar();
         echo view("finalizarCompra");
         echo $this->template->footer();
