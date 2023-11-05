@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ByteShop</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('public/img/favicon/apple-touch-icon.png') ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('public/img/favicon/favicon-32x32.png') ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('public/img/favicon/favicon-16x16.png') ?>">
+    <link rel="manifest" href="<?= base_url('public/img/favicon/site.webmanifest') ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
@@ -89,11 +93,11 @@
                         </a>
                         <ul class="dropdown-menu ">
 
-                        <?php foreach($categorias as $categoria){ ?> 
-                            <li><a class="dropdown-item" href="<?= base_url('produtos')."/$categoria->id" ?>"><?= $categoria->nome ?> </a></li>
+                            <?php foreach ($categorias as $categoria) { ?>
+                                <li><a class="dropdown-item" href="<?= base_url('produtos') . "/$categoria->id" ?>"><?= $categoria->nome ?> </a></li>
                             <?php } ?>
-                          
-                          
+
+
 
                         </ul>
 
@@ -130,7 +134,7 @@
             </div>
         </div>
     </nav>
-    
+
 
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div id="liveToast" class="toast " role="alert" aria-live="assertive" aria-atomic="true">
