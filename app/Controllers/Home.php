@@ -23,7 +23,7 @@ class Home extends BaseController
     {
         if (isset($_GET["pesquisa"])) {
 
-            $dados['categorias'] = $this->categoriaModel->getCategorias();
+            $dados['categorias'] = $this->categoriaModel->getCategorias($_GET["pesquisa"]);
             $dados['produtos'] = $this->produtoModel->getProdutos($_GET["pesquisa"]);
         } else {
 

@@ -1,6 +1,6 @@
 <section>
     <div class="container mt-5 pt-5">
-        <div class="row gy-2">
+        <div class="row  justify-content-center gy-2">
 
             <?php
 

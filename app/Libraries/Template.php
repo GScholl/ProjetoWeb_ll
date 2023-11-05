@@ -3,12 +3,15 @@
 namespace Libraries;
 
 use Controllers\BaseController;
-use Libraries\Session;
+use Libraries\Session;  
+use Models\CategoriaModel;
 
 class Template extends BaseController
 {
-
-
+    public $categoriaModel;
+    public function __construct(){
+        $this->categoriaModel = new CategoriaModel();
+    }
 
     public function navbar($ExtrasCSS = [])
     {
@@ -21,6 +24,7 @@ class Template extends BaseController
 
         ];
         array_merge($ImportsCss, $ExtrasCSS);
+        $dados['categorias'] = $this->categoriaModel->getCategorias();
         $dados['session'] = new Session();
         $dados['css_files'] = $ImportsCss;
 

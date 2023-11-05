@@ -88,12 +88,12 @@
                             Produtos
                         </a>
                         <ul class="dropdown-menu ">
-                            <li><a class="dropdown-item" href="<?= base_url('plataforma/meus-cursos') ?>"><i class="fa fa-book"></i> item 1</a></li>
-                            <li><a class="dropdown-item" href="<?= base_url('plataforma/historico') ?>"><i class="fa fa-store"></i> item 2</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
 
+                        <?php foreach($categorias as $categoria){ ?> 
+                            <li><a class="dropdown-item" href="<?= base_url('produtos')."/$categoria->id" ?>"><?= $categoria->nome ?> </a></li>
+                            <?php } ?>
+                          
+                          
 
                         </ul>
 

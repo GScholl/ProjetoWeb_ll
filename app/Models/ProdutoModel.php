@@ -31,6 +31,33 @@ class ProdutoModel extends  BaseModel
 
         return $this->getResult($query);
     }
+    
+    public function getProdutosByCategoria($id_categoria)
+    {
+
+      
+        $query = "SELECT
+                        id,
+                        titulo,
+                        descricao,
+                        id_categoria,
+                        valor,
+                        (
+                         select 
+                            url 
+                            from 
+                                fotos_produto 
+                            WHERE 
+                                foto_capa is true 
+                            and 
+                                id_produto = produto.id
+                        ) as foto_produto 
+                        FROM produto 
+                        WHERE 
+                        id_categoria = $id_categoria";
+
+        return $this->getResult($query);
+    }
     public function getProdutoById($idProduto)
     {
         $query = "SELECT 

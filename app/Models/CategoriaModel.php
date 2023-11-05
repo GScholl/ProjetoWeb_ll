@@ -26,4 +26,10 @@ class CategoriaModel extends BaseModel
 
         return $this->getResult($query);
     }
+    public function getCategoriaById($id){
+
+        $query = "SELECT * FROM categoria WHERE id = $id";
+
+        return $this->getFirst($query);
+    }
 }

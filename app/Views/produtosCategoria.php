@@ -1,8 +1,13 @@
 <section>
-    <div class="container">
-        <div class="row">
-            <?php foreach ($produtos as $produto) {
-                if ($produto->id_categoria == $categoria->id) {
+    <div class="container mt-5 pt-5">
+        <h3 class="text-purple text-center"><?= $categoria->nome ?></h3>
+        <div class="row justify-content-center">
+            <?php 
+            if($produtos != false && count($produtos) > 0){
+
+           
+            foreach ($produtos as $produto) {
+                
                     $tipo = strpos($produto->foto_produto, "http") == false ? 1 : 0;
 
             ?>
@@ -25,7 +30,12 @@
                         </div>
                     </div>
             <?php }
-            } ?>
+             }else{?>
+
+             <h4 class="text-purple text-center"> <i class="fa fa-circle-xmark"></i> Não há nenhum produto por aqui...</h4>
+             
+            <?php }
+           ?>
         </div>
     </div>
 </section>
