@@ -8,4 +8,7 @@ Para mudar os dados de banco de dados  a estrutura o arquivo é App/Config/Datab
 Qualquer dificuldade estamos a disposição para auxiliar
 
 
-Alunos: Guilherme Scholl, Nicolas Ramos e Ricardo Franco
+Autores: 
+- [@GScholl](https://www.github.com/GScholl)
+- [@NicolasRamosWdg](https://www.github.com/NicolasRamosWdg)
+- [@francocontigo](https://www.github.com/francocontigo)
