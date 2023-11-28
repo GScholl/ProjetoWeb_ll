@@ -3,7 +3,7 @@ Neste Projeto foi criado um mini framework de php, para roteamento amigavel de d
 
 
 Para Mudar o base_url favor ir na Estrutura de pastas App/Config/App.php
-Para mudar os dados de banco de dados  a estrutura o arquivo é App/Config/Database.php
+Para mudar os acessos de banco de dados  a estrutura o arquivo é App/Config/Database.php
 
 Qualquer dificuldade estamos a disposição para auxiliar
 
